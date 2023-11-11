@@ -5,9 +5,6 @@ with open('ip.log', 'r', encoding='utf-8') as fp:
         for line in fp:
             x = line.split('.')
             for i in range(4):
-                # a = int(x[i])
-                # b = int(mask[i])
-                # print(a, type(b))
                 c = int(x[i]) & int(mask[i])
                 ans += str(c) + '.'
             fpw.write(ans[:-1] + '\n')
